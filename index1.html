@@ -14,15 +14,15 @@
         <label for="agreement">Acepto los términos:</label>
         <select id="agreement">
             <option value="maybe" selected>Puede</option>
-            <option value="yes">No</option>
-            <option value="no">Sí</option>
+            <option value="no">No</option>
+            <option value="yes">Sí</option>
         </select>
         <button id="continueBtn1" disabled>Continuar</button>
     </main>
     <script>
         /* Buena suerte! */
         document.getElementById("agreement").addEventListener("change", e => {
-            document.getElementById("continueBtn1").disabled = e.target.value == 'maybe';
+            document.getElementById("continueBtn1").disabled = e.target.value != 'yes';
         });
     </script>
 </body>
