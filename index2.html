@@ -14,7 +14,9 @@
         <button style="margin-top: 1rem;" id="continueBtn2" disabled>Continuar</button>
     </main>
     <script>
-        /* Buena suerte! */
+        document.getElementById("acceptTerms").addEventListener("change", e=>{
+            document.getElementById("continueBtn2").disabled = !document.getElementById("acceptTerms").checked;
+        });
     </script>  
 </body>
 </html>
