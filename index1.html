@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios Event Change</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 </head>
+
 <body>
     <main class="container">
         <h2>Ejercicio 1: Select y botón habilitado</h2>
@@ -16,9 +18,13 @@
             <option value="no">Sí</option>
         </select>
         <button id="continueBtn1" disabled>Continuar</button>
-    </main>   
+    </main>
     <script>
         /* Buena suerte! */
+        document.getElementById("agreement").addEventListener("change", e => {
+            document.getElementById("continueBtn1").disabled = e.target.value == 'maybe';
+        });
     </script>
 </body>
+
 </html>
